@@ -5,8 +5,7 @@ pipeline {
             steps {
                 script{
                     sh """
-                    cd Development
-                    $Pwd
+                    ls
                     """
                 }
             }
