@@ -5,7 +5,8 @@ pipeline {
             steps {
                 script{
                     sh """
-                    echo "YARRAK"
+                    cd Development
+                    $Pwd
                     """
                 }
             }
