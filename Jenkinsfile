@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script{
                     sh """
-                    echo "YARRAK
+                    echo "YARRAK"
                     """
                 }
             }
