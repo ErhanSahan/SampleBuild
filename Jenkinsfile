@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh """
+                cd Development
                 mvn clean deploy
                 """
             }
