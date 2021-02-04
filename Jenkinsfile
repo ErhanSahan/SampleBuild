@@ -8,6 +8,7 @@ pipeline {
                     ls
                     cd Development
                     ls
+                    mvn clean
                     """
                 }
             }
