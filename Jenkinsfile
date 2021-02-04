@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             when{
                 allOf{
-                    params.dev == true             
+                    ${params.dev} == true             
                 }
             }
             steps {
