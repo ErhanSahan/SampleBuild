@@ -11,7 +11,7 @@ pipeline {
                     ls
                     cd Development
                     ls
-                    mvn clean
+                    mvn clean deploy
                     """
                 }
             }
