@@ -6,6 +6,8 @@ pipeline {
                 script{
                     sh """
                     ls
+                    cd Development
+                    ls
                     """
                 }
             }
