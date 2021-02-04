@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             when{
-                all of{
+                allOf{
                     params.dev == true             
                 }
             }
