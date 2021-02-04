@@ -6,6 +6,7 @@ pipeline {
                 script{
                     """
                 cd Development
+                ls
                 echo "YARRAK"
                 """
                 }
