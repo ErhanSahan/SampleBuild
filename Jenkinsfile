@@ -4,7 +4,7 @@ pipeline {
      maven 'maven'  
     }
       parameters {
-         booleanParam(name: 'dev', defaultValue: true; description: 'What should I say?')
+         booleanParam(name: 'dev', defaultValue: true, description: 'What should I say?')
      }
     stages {
         stage('build') {
