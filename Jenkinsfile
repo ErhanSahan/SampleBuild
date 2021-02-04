@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-               echo "YARRAK"
+                script{
+                    """
+                    echo "YARRAK
+                    """
+                }
             }
         }
     }
