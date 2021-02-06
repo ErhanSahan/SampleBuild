@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build hadiya'){
             steps{
-                build job: 'hadiya', parameters: [booleanParam(name: 'dev', value: true)]
+                build 'test'
             }
         }
         stage('build') {
