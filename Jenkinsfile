@@ -7,10 +7,13 @@ pipeline {
          booleanParam(name: 'dev', defaultValue: true, description: 'What should I say?')
      }
     stages {
-        stage('build') {
+        stage('build hadiya'){
             steps{
                 build job: 'hadiya', parameters: [booleanParam(name: 'dev', value: true)]
             }
+        }
+        stage('build') {
+
             when{
                 allOf{
                     expression { params.dev == true }
