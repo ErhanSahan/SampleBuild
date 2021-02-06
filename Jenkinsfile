@@ -8,6 +8,9 @@ pipeline {
      }
     stages {
         stage('build') {
+            steps{
+                build job: 'hadiya', parameters: [booleanParam(name: 'dev', value: true)]
+            }
             when{
                 allOf{
                     expression { params.dev == true }
