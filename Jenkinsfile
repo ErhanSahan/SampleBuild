@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build hadiya'){
             steps{
-                build 'test'
+                build 'BuildDeneme2'
             }
         }
         stage('build') {
