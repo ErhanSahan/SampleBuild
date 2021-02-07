@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build hadiya'){
             steps{
-                build 'BuildDeneme2'
+                build job: 'call', parameters: [booleanParam(name: 'Version', value: true), string(name: 'DEPLOY_ENV', value: '5.3')]
             }
         }
         stage('build') {
