@@ -6,6 +6,8 @@ pipeline {
       parameters {
          booleanParam(name: 'call', defaultValue: true, description: 'What should I say?')
          booleanParam(name: 'call2', defaultValue: true, description: 'What should I say?')
+         string(name: 'version', defaultValue: '', description: 'Version')
+
      }
     stages {
         stage('build call'){
@@ -13,7 +15,7 @@ pipeline {
                 expression{params.call == true}
             }
             steps{
-                build job: 'call', parameters: [booleanParam(name: 'Version', value: true), string(name: 'DEPLOY_ENV', value: '5.3')]
+                build job: 'call', parameters: [booleanParam(name: 'Version', value: true), string(name: 'DEPLOY_ENV', value: '${params.version}')]
             }
         }
         stage('build call2'){
