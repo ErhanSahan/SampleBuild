@@ -25,12 +25,6 @@ pipeline {
             }
         }
         stage('build') {
-
-            when{
-                allOf{
-                    expression { params.dev == true }
-                }
-            }
             steps {
                 script{
                     sh """
