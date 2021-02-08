@@ -18,7 +18,6 @@ pipeline {
                 sh"""
                 #!/bin/bash
                 rm -rf *
-                git fetch --tags --progress -- https://github.com/ErhanSahan/build.git +refs/heads/*:refs/remotes/origin/*
                 git checkout development
                 cd Development
                 mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
