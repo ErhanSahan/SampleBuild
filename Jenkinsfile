@@ -18,7 +18,7 @@ pipeline {
                 sh"""
                 #!/bin/bash
                 rm -rf *
-                git pull
+                git fetch https://github.com/ErhanSahan/build.git development:development
                 git checkout development
                 cd Development
                 mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
