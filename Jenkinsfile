@@ -56,6 +56,8 @@ pipeline {
             steps{            
                 sh"""
                 #!/bin/bash
+                git config user.name "ErhanSahan"
+                git config user.email "erhan_sahan987@hotmail.com"
                 git add .
                 git commit -m "Add existing file"
                 git push https://github.com/ErhanSahan/build.git development
