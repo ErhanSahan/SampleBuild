@@ -39,11 +39,6 @@ pipeline {
                 build job: 'call2', parameters: [booleanParam(name: 'Version', value: true), string(name: 'DEPLOY_ENV', value: '5.3')]
             }
         }
-        stage('checkout'){
-            steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '5a91e258-8aeb-43f9-84c7-bae3e933415d', url: 'https://github.com/ErhanSahan/build.git']]])
-            }
-        }
         stage('build') {
             steps {
                 script{
