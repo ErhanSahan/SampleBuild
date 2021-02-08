@@ -58,8 +58,7 @@ pipeline {
                 #!/bin/bash
                 git add .
                 git commit -m "Add existing file"
-                git remote add origin https://github.com/ErhanSahan/build.git
-                git push origin development
+                git push https://github.com/ErhanSahan/build.git development
                 """
             }
         }
