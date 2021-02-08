@@ -45,6 +45,7 @@ pipeline {
                 script{
                     sh """
                     ls
+                    cat README.me
                     cd Development
                     ls
                     mvn clean install
