@@ -57,12 +57,14 @@ pipeline {
             }
         }
         stage('push'){
+            steps{            
                 sh"""
                 #!/bin/bash
                 git add .
                 git commit -m "Add existing file"
                 git push origin development
                 """
+            }
         }
     }
 }
