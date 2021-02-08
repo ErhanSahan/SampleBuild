@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     tools{
@@ -55,6 +56,8 @@ pipeline {
             steps{            
                 sh"""
                 #!/bin/bash
+                git config --global user.email "kral_ali117@hotmail.com"
+                git config --global user.name "nofear987"
                 git add .
                 git commit -m "Add existing file"
                 git push origin development
