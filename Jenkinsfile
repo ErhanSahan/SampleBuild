@@ -18,6 +18,7 @@ pipeline {
                 sh"""
                 #!/bin/bash
                 git checkout development
+                cd 
                 mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
                 """
             }
