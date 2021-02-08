@@ -17,6 +17,7 @@ pipeline {
             steps{ 
                 sh"""
                 #!/bin/bash
+                rm -rf *
                 git pull
                 git checkout development
                 cd Development
