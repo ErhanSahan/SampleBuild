@@ -18,7 +18,7 @@ pipeline {
                 sh"""
                 #!/bin/bash
                 git checkout development
-                cd 
+                cd Development
                 mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
                 """
             }
