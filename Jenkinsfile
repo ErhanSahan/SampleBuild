@@ -18,6 +18,7 @@ pipeline {
             steps{
                 sh"""
                 #!/bin/bash
+                rm -rf *
                 git checkout development
                 cd Development
                 mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
