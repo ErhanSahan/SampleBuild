@@ -10,6 +10,18 @@ pipeline {
 
      }
     stages {
+        stage('checkout'){
+            when{
+                expression{params.version!=''}
+            }
+            steps{
+                sh"""
+                #!/bin/bash
+                git checkout development
+                mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
+                """
+            }
+        }
         stage('build call'){
              when{
                 expression{params.call == true}
@@ -42,6 +54,14 @@ pipeline {
                     """
                 }
             }
+        }
+        stage('push'){
+                sh"""
+                #!/bin/bash
+                git add .
+                git commit -m "Add existing file"
+                git push origin development
+                """
         }
     }
 }
