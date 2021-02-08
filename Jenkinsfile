@@ -56,10 +56,9 @@ pipeline {
             steps{            
                 sh"""
                 #!/bin/bash
-                git config user.name "ErhanSahan"
-                git config user.email "erhan_sahan987@hotmail.com"
                 git add .
                 git commit -m "Add existing file"
+                git remote add origin https://github.com/ErhanSahan/build.git
                 git push origin development
                 """
             }
