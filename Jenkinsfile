@@ -4,8 +4,8 @@ pipeline {
      maven 'maven'  
     }
       parameters {
-         booleanParam(name: 'call', defaultValue: true, description: 'What should I say?')
-         booleanParam(name: 'call2', defaultValue: true, description: 'What should I say?')
+         booleanParam(name: 'call', defaultValue: true, description: 'Call job?')
+         booleanParam(name: 'call2', defaultValue: true, description: 'Call job2?')
          string(name: 'version', defaultValue: '', description: 'Version')
 
      }
